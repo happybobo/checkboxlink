@@ -3,7 +3,7 @@ checkboxlink
 
 Checkboxlink
 
-A proof of concept that check box can be manipulated from LibXL (with help of Excel Macros)
+A proof of concept that check box can be manipulated from LibXL with help of Excel Macros
 
 # Usage
 
@@ -14,5 +14,6 @@ NOTE : Excel does not reload automatically, so you need to close/open Excel Book
 
 # Idea
 
-If you look at the Row 33-36 of sample.xls and sample.xlsx, there are boolean text entries. Those entries are linked to checkboxes located up 32 rows.
-So, this idea only works "if there is one checkbox corresponiding to one cell". So far from templates, it seems to be the case.
+If you look at the Row 33-36 of sample.xls and sample.xlsx, there are boolean text entries. Those entries are linked to checkboxes located up 32 rows. LibXL needs to only interact with the boolean text fields, and Excel automatically reflect the result on checkboxes.
+
+This idea only works "if there is one checkbox corresponiding to one cell". (So far from templates, it seems to be the case.)

@@ -20,7 +20,7 @@ This idea only works "if there is one checkbox corresponiding to one cell". (So 
 
 # Key part to look
 * `ExcelHandleViewController.m` line 88-108. Here it toggle boolean values
-* The macro to link checkboxes to the cells below 32 rows : 
+* The macro to link checkboxes to the cells below 32 rows (it just needs to run once) : 
 ```
 Sub LinkCheckBoxes()
   Dim chk As CheckBox

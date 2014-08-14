@@ -13,6 +13,8 @@
 
 - (IBAction)editXLS:(id)sender;
 - (IBAction)editXLSX:(id)sender;
+- (IBAction)editXLSM:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UILabel *outputLabel;
 
 @property (nonatomic) BookHandle book;
@@ -68,9 +70,9 @@
     return filePath;
 }
 
-- (void)readXLS:(NSString *)type {
+- (void)readExcel:(NSString *)type {
     NSString *filePath = [self filePathForType:type];
-    if ([[type lowercaseString] isEqualToString:@"xlsx"]) {
+    if ([[type lowercaseString] isEqualToString:@"xlsx"] || [[type lowercaseString] isEqualToString:@"xlsm"]) {
         self.book = xlCreateXMLBook();
     } else {
         self.book = xlCreateBook();
@@ -85,7 +87,7 @@
     self.sheet = xlBookGetSheet(self.book, 0);
 }
 
-- (void)editXLS {
+- (void)editExcel {
     [self toggleRow:32 column:1];
     [self toggleRow:33 column:2];
     [self toggleRow:34 column:1];
@@ -115,7 +117,7 @@
     return 35;
 }
 
-- (void)writeXLS:(NSString *)type {
+- (void)writeExcel:(NSString *)type {
     NSString *documentDir = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *outPath = [[documentDir stringByAppendingPathComponent:@"output"] stringByAppendingPathExtension:type];
 
@@ -135,14 +137,20 @@
 }
 
 - (IBAction)editXLS:(id)sender {
-    [self readXLS:@"xls"];
-    [self editXLS];
-    [self writeXLS:@"xls"];
+    [self readExcel:@"xls"];
+    [self editExcel];
+    [self writeExcel:@"xls"];
 }
 
 - (IBAction)editXLSX:(id)sender {
-    [self readXLS:@"xlsx"];
-    [self editXLS];
-    [self writeXLS:@"xlsx"];
+    [self readExcel:@"xlsx"];
+    [self editExcel];
+    [self writeExcel:@"xlsx"];
+}
+
+- (IBAction)editXLSM:(id)sender {
+    [self readExcel:@"xlsm"];
+    [self editExcel];
+    [self writeExcel:@"xlsm"];
 }
 @end

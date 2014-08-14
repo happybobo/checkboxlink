@@ -13,14 +13,15 @@ A proof of concept that check box can be manipulated from LibXL with help of Exc
 NOTE : Excel does not reload automatically, so you need to close/open Excel Book after tapping 'Edit ...' to check latest status.
 
 # Idea
+Excel allows you to *__link__* a checkbox to a value of the cell.
 
-If you look at the Row 33-36 of sample.xls and sample.xlsx, there are boolean text entries. Those entries are *__linked__* to checkboxes located up 32 rows. LibXL needs to only interact with the boolean text fields, and Excel automatically reflect the result on checkboxes.
+If you look at the Row 33-36 of sample.xls and sample.xlsx, there are boolean text entries. Those entries are *__linked__* to checkboxes located up 32 rows. LibXL needs to only interact with the boolean text fields, and Excel automatically reflect the result to corresponding checkboxes.
 
-This idea only works "if there is one checkbox corresponiding to one cell". (So far from templates, it seems to be the case.)
+This idea only works "if there is one checkbox corresponiding to one cell". But so far from templates, it seems to be the case.
 
 # Key part to look
-* `ExcelHandleViewController.m` line 88-108. Here it toggle boolean values
-* The macro to link checkboxes to the cells below 32 rows (it just needs to run once) : 
+* `ExcelHandleViewController.m` line 88-108. Here app toggles boolean entries via libXL.
+* The macro to link checkboxes to the cells below 32 rows (it just needs to run once before form gets bundled into the app) : 
 ```
 Sub LinkCheckBoxes()
   Dim chk As CheckBox

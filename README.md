@@ -19,7 +19,7 @@ If you look at the Row 33-36 of sample.xls and sample.xlsx, there are boolean te
 
 This idea only works "if there is one checkbox corresponiding to one cell". But so far from templates, it seems to be the case.
 
-# Key part to look
+# Important part of the Code
 * `ExcelHandleViewController.m` line 88-108. Here app toggles boolean entries via libXL.
 * The macro to link checkboxes to the cells below 32 rows (it just needs to run once before form gets bundled into the app) : 
 ```

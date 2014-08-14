@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="efv-Ci-V68">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Excel Handle View Controller-->
+        <scene sceneID="uZ7-ED-2Jp">
+            <objects>
+                <viewController id="efv-Ci-V68" customClass="ExcelHandleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eqi-On-hOj"/>
+                        <viewControllerLayoutGuide type="bottom" id="avp-GP-Fsj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Cg-IJ-yDj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bey-Ny-0Xb">
+                                <rect key="frame" x="126" y="148" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dfZ-Ro-LaK"/>
+                                    <constraint firstAttribute="width" constant="69" id="oYm-J7-YDn"/>
+                                </constraints>
+                                <state key="normal" title="Edit XLSX">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="editXLSX:" destination="efv-Ci-V68" eventType="touchUpInside" id="p28-Sb-l6H"/>
+                                </connections>
+                            </button>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSe-Dr-oHT">
+                                <rect key="frame" x="131" y="96" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="m1E-iZ-T3P"/>
+                                    <constraint firstAttribute="width" constant="59" id="tzy-CQ-NYS"/>
+                                </constraints>
+                                <state key="normal" title="Edit XLS">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="editXLS:" destination="efv-Ci-V68" eventType="touchUpInside" id="Ef3-yW-kOh"/>
+                                </connections>
+                            </button>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Output path :                                  " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" translatesAutoresizingMaskIntoConstraints="NO" id="MFv-Ii-CmP">
+                                <rect key="frame" x="25" y="236" width="270" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bey-Ny-0Xb" firstAttribute="top" secondItem="eqi-On-hOj" secondAttribute="bottom" constant="128" id="3dy-p9-wkB"/>
+                            <constraint firstItem="MFv-Ii-CmP" firstAttribute="top" secondItem="eqi-On-hOj" secondAttribute="bottom" constant="216" id="Df0-b7-h8O"/>
+                            <constraint firstAttribute="centerX" secondItem="Bey-Ny-0Xb" secondAttribute="centerX" constant="-0.5" id="KDA-lV-zSV"/>
+                            <constraint firstItem="cSe-Dr-oHT" firstAttribute="top" secondItem="eqi-On-hOj" secondAttribute="bottom" constant="76" id="cTz-Ea-bxB"/>
+                            <constraint firstAttribute="centerX" secondItem="MFv-Ii-CmP" secondAttribute="centerX" id="ftu-JS-3Og"/>
+                            <constraint firstAttribute="centerX" secondItem="cSe-Dr-oHT" secondAttribute="centerX" constant="-0.5" id="opz-4Y-Tt0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="outputLabel" destination="MFv-Ii-CmP" id="7GQ-2f-Ozg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VBV-xS-Y21" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341" y="5"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

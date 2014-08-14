@@ -21,6 +21,9 @@
 		DB1A071218A5483F0057457F /* CheckboxLinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1A071118A5483F0057457F /* CheckboxLinkTests.m */; };
 		DB353484199D1DC800D5D714 /* LibXL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB353483199D1DC800D5D714 /* LibXL.framework */; };
 		DB353486199D239000D5D714 /* sample.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = DB353485199D234300D5D714 /* sample.xlsx */; };
+		DB353489199D2E5800D5D714 /* ExcelHandleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB353488199D2E5800D5D714 /* ExcelHandleViewController.m */; };
+		DB35348B199D2EBB00D5D714 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB35348A199D2EBB00D5D714 /* Storyboard.storyboard */; };
+		DB35348D199D2FBA00D5D714 /* sample.xls in Resources */ = {isa = PBXBuildFile; fileRef = DB35348C199D2FBA00D5D714 /* sample.xls */; };
 		DF1EAAFB43EC489085DC6FB0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6743C4A81434A9EA990F973 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,10 @@
 		DB1A071118A5483F0057457F /* CheckboxLinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckboxLinkTests.m; sourceTree = "<group>"; };
 		DB353483199D1DC800D5D714 /* LibXL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LibXL.framework; path = "../../../../../Downloads/libxl-ios-3.6.0.0/LibXL.framework"; sourceTree = "<group>"; };
 		DB353485199D234300D5D714 /* sample.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.xlsx; sourceTree = "<group>"; };
+		DB353487199D2E5800D5D714 /* ExcelHandleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExcelHandleViewController.h; sourceTree = "<group>"; };
+		DB353488199D2E5800D5D714 /* ExcelHandleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExcelHandleViewController.m; sourceTree = "<group>"; };
+		DB35348A199D2EBB00D5D714 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		DB35348C199D2FBA00D5D714 /* sample.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.xls; sourceTree = "<group>"; };
 		E5B4503A81D14AEDA2983481 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +93,7 @@
 		DB1A06E018A5483E0057457F = {
 			isa = PBXGroup;
 			children = (
+				DB35348A199D2EBB00D5D714 /* Storyboard.storyboard */,
 				DB1A06F218A5483E0057457F /* CheckboxLink */,
 				DB1A070B18A5483F0057457F /* CheckboxLinkTests */,
 				DB1A06EB18A5483E0057457F /* Frameworks */,
@@ -119,6 +127,7 @@
 		DB1A06F218A5483E0057457F /* CheckboxLink */ = {
 			isa = PBXGroup;
 			children = (
+				DB35348C199D2FBA00D5D714 /* sample.xls */,
 				DB353485199D234300D5D714 /* sample.xlsx */,
 				DB1CB8071992D18A00241FB4 /* Models */,
 				DB1CB8061992D18300241FB4 /* ViewControllers */,
@@ -170,6 +179,8 @@
 		DB1CB8061992D18300241FB4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DB353487199D2E5800D5D714 /* ExcelHandleViewController.h */,
+				DB353488199D2E5800D5D714 /* ExcelHandleViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -262,8 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB353486199D239000D5D714 /* sample.xlsx in Resources */,
+				DB35348B199D2EBB00D5D714 /* Storyboard.storyboard in Resources */,
 				DB1A06F718A5483E0057457F /* InfoPlist.strings in Resources */,
 				DB1A06FF18A5483E0057457F /* Images.xcassets in Resources */,
+				DB35348D199D2FBA00D5D714 /* sample.xls in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB353489199D2E5800D5D714 /* ExcelHandleViewController.m in Sources */,
 				DB1A06FD18A5483E0057457F /* AppDelegate.m in Sources */,
 				DB1A06F918A5483E0057457F /* main.m in Sources */,
 			);

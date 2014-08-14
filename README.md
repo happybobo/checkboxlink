@@ -21,7 +21,7 @@ This idea only works "if there is one checkbox corresponiding to one cell". But 
 
 # Important part of the Code
 * `ExcelHandleViewController.m` line 88-108. Here app toggles boolean entries via libXL.
-* The macro to link checkboxes to the cells below 32 rows (it just needs to run once before form gets bundled into the app) : 
+* The macro to link checkboxes to the cells below 32 rows. It just needs to run once before form gets bundled into the app. (Thus, not in the repo) : 
 ```
 Sub LinkCheckBoxes()
   Dim chk As CheckBox
